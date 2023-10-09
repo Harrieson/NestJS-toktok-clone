@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  postgres:
+    image: postgres:10
+    container_name: postgres_tiktok
+    ports:
+      - "5433:5433"
+    environment:
+      POSTGRES_USER: harrie
+      POSTGRES_PASSWORD: Harrie
+      POSTGRES_DB: tiktok
+    volumes:
+      - my_postgress_data:/var/lib/postgress/data
+
+volumes:
+  my_postgress_data:
